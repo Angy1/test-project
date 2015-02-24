@@ -1,5 +1,6 @@
 package com.example.tests;
 
+
 public class GroupData {
 	public String name;
 	public String header;
@@ -13,4 +14,5 @@ public class GroupData {
 		this.header = header;
 		this.footer = footer;
 	}
+	
 }
