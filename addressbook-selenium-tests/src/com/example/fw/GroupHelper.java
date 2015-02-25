@@ -3,32 +3,49 @@ package com.example.fw;
 import org.openqa.selenium.By;
 
 import com.example.tests.GroupData;
-import com.example.tests.TestBase;
 
-public class GroupHelper {
+public class GroupHelper extends HelperBase{
 
-	public void initGroupCreation() {
-		
-	   ApplicationManager.driver.findElement(By.name("new")).click();
+	public GroupHelper(ApplicationManager manager) {
+		super(manager);	
 	  }
 
-	public void fillGroupForm(ApplicationManager applicationManager, TestBase testBase, GroupData group) {	
-	   ApplicationManager.driver.findElement(By.name("group_name")).clear();
-	   ApplicationManager.driver.findElement(By.name("group_name")).sendKeys(group.name);
-	   ApplicationManager.driver.findElement(By.name("group_header")).clear();
-	   ApplicationManager.driver.findElement(By.name("group_header")).sendKeys(group.header);
-	   ApplicationManager.driver.findElement(By.name("group_footer")).clear();
-	   ApplicationManager.driver.findElement(By.name("group_footer")).sendKeys(group.footer);
+	public void initGroupCreation() {
+	   click(By.name("new"));
+	  }
+
+	public void fillGroupForm(GroupData group) {	
+	   type(By.name("group_name"), group.name);
+	   type(By.name("group_header"), group.header);
+	   type(By.name("group_footer"), group.footer);
 	  }
 
 	public void submitGroupCreation() {
-	
-	    ApplicationManager.driver.findElement(By.name("submit")).click();
+	  click(By.name("submit"));
 	  }
 
 	public void returnToGroupsPage() {
-	
-	   ApplicationManager.driver.findElement(By.linkText("group page")).click();
+	  click(By.linkText("group page"));
 	  }
 
+	public void deleteGroup(int index) {
+		selectGroupByIndex(index);
+		click(By.name("delete"));	
+	  }
+
+	private void selectGroupByIndex(int index) {
+		click(By.xpath("//input[@name='selected[]'][" + index + "]"));
+	}
+	
+    
+	public void initGroupModification(int index) {
+		selectGroupByIndex(index);
+		click(By.name("edit"));
+		
+	}
+
+	public void submitGroupModification() {
+		click(By.name("update"));
+		
+	}
 }
