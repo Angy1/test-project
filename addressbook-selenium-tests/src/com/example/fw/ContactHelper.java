@@ -30,7 +30,12 @@ public class ContactHelper extends HelperBase{
 	    type(By.name("address2"), contact.address2);
 	    type(By.name("phone2"), contact.homephone2); 
 	  }
-
+	
+	public void updateContactForm(ContactData contact) {
+		type(By.name("firstname"), contact.firstname);
+		
+	}
+	
 	public void submitContactCreation() {
 	   click(By.name("submit"));
 	  }
@@ -39,4 +44,20 @@ public class ContactHelper extends HelperBase{
 	   click(By.linkText("home page"));
 	  }
 
+	public void deleteContact(int index) {
+		selectContactByIndex(index);
+		click(By.name("update"));
+	}
+
+	private void selectContactByIndex(int index) {
+		click(By.xpath("//img[@alt='Edit'][" +index + "]"));
+	}
+
+	public void initContactModification(int index) {
+		selectContactByIndex(index);	
+	}
+
+	public void submitContactModification() {
+		click(By.name("update"));	
+	}
 }
