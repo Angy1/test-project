@@ -1,5 +1,4 @@
-.settings/**
-bin/**
-test-output/**
-.metadata/** 
-/bin
+.settings/*
+bin/*
+test-output/*
+.metadata/*
