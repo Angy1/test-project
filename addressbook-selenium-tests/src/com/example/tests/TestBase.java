@@ -14,6 +14,7 @@ import com.example.fw.ApplicationManager;
 public class TestBase {
 
 	protected ApplicationManager app;
+	private String name;
 
 	@BeforeTest
 	public void seUp() throws Exception {
@@ -31,11 +32,36 @@ public class TestBase {
 	public Iterator<Object[]> randomValidGroupGenerator() {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (int i = 0; i < 5; i++) {
-			GroupData group = new GroupData();
-			group.name = generateRandomString();
-			group.header = generateRandomString();
-			group.footer = generateRandomString();
+			 GroupData group = new GroupData()
+			.withName(generateRandomString())
+			.withHeader(generateRandomString())
+			.withFooter(generateRandomString());
 			list.add(new Object[] { group });
+		}
+		return list.iterator();
+	}
+
+	@DataProvider
+	public Iterator<Object[]> randomValidContactGenerator() {
+		List<Object[]> list = new ArrayList<Object[]>();
+
+		for (int i = 0; i < 5; i++) {
+			ContactData contact = new ContactData()
+			.withFirstName(generateRandomString())
+			.withLastName(generateRandomString())
+			.withAddress1(generateRandomString())
+			.withHomephone1(generateRandomString())
+			.withMobile1(generateRandomString())
+			.withWorkphone1(generateRandomString())
+			.withEmail1(generateRandomString())
+			.withEmail2(generateRandomString())
+			.withBirthdate(generateRandomString())
+			.withBirthmonth(generateRandomString())
+			.withBirthyear(generateRandomString())
+			.withGroup(generateRandomString())
+			.withAddress2(generateRandomString())
+			.withHomephone2(generateRandomString());
+			list.add(new Object[] { contact });
 		}
 		return list.iterator();
 	}
@@ -48,5 +74,4 @@ public class TestBase {
 			return "test" + rnd.nextInt();
 		}
 	}
-
 }
