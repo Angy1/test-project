@@ -1,9 +1,13 @@
 package com.example.tests;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 //import java.util.Random;
+
+import java.util.Properties;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -21,7 +25,9 @@ public class TestBase {
 
 	@BeforeTest
 	public void seUp() throws Exception {
-		app = new ApplicationManager();
+		Properties properties = new Properties();
+		properties.load(new FileReader(new File("application.properties")));
+		app = new ApplicationManager(properties);
 	}
 
 	@AfterTest

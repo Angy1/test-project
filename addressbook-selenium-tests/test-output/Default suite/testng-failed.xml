@@ -6,7 +6,6 @@
       <class name="com.example.tests.GroupCreationTests">
         <methods>
           <include name="seUp"/>
-          <include name="tearDown"/>
           <include name="testGroupCreationWithValidData"/>
         </methods>
       </class> <!-- com.example.tests.GroupCreationTests -->
