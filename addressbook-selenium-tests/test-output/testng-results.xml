@@ -2,19 +2,19 @@
 <testng-results skipped="3" failed="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3245" started-at="2015-03-20T17:44:54Z" finished-at="2015-03-20T17:44:57Z">
+  <suite name="Default suite" duration-ms="3314" started-at="2015-03-20T18:18:59Z" finished-at="2015-03-20T18:19:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3245" started-at="2015-03-20T17:44:54Z" finished-at="2015-03-20T17:44:57Z">
+    <test name="Default test" duration-ms="3314" started-at="2015-03-20T18:18:59Z" finished-at="2015-03-20T18:19:03Z">
       <class name="com.example.tests.GroupCreationTests">
-        <test-method status="FAIL" signature="seUp()[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="seUp" is-config="true" duration-ms="0" started-at="2015-03-20T13:44:54Z" finished-at="2015-03-20T13:44:54Z">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="setUp" is-config="true" duration-ms="0" started-at="2015-03-20T14:18:59Z" finished-at="2015-03-20T14:18:59Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at java.util.Hashtable.get(Unknown Source)
 	at java.util.Properties.getProperty(Unknown Source)
 	at com.example.fw.ApplicationManager.<init>(ApplicationManager.java:31)
-	at com.example.tests.TestBase.seUp(TestBase.java:30)
+	at com.example.tests.TestBase.setUp(TestBase.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -42,8 +42,8 @@
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- seUp -->
-        <test-method status="SKIP" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="testGroupCreationWithValidData" duration-ms="1" started-at="2015-03-20T13:44:57Z" data-provider="groupsFromFile" finished-at="2015-03-20T13:44:57Z">
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="testGroupCreationWithValidData" duration-ms="1" started-at="2015-03-20T14:19:03Z" data-provider="groupsFromFile" finished-at="2015-03-20T14:19:03Z">
           <params>
             <param index="0">
               <value>
@@ -54,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="SKIP" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="testGroupCreationWithValidData" duration-ms="3" started-at="2015-03-20T13:44:57Z" data-provider="groupsFromFile" finished-at="2015-03-20T13:44:57Z">
+        <test-method status="SKIP" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="testGroupCreationWithValidData" duration-ms="0" started-at="2015-03-20T14:19:03Z" data-provider="groupsFromFile" finished-at="2015-03-20T14:19:03Z">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="SKIP" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="testGroupCreationWithValidData" duration-ms="2" started-at="2015-03-20T13:44:57Z" data-provider="groupsFromFile" finished-at="2015-03-20T13:44:57Z">
+        <test-method status="SKIP" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="testGroupCreationWithValidData" duration-ms="1" started-at="2015-03-20T14:19:03Z" data-provider="groupsFromFile" finished-at="2015-03-20T14:19:03Z">
           <params>
             <param index="0">
               <value>
@@ -76,7 +76,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-03-20T13:44:57Z" finished-at="2015-03-20T13:44:57Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@6f79caec]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-03-20T14:19:03Z" finished-at="2015-03-20T14:19:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

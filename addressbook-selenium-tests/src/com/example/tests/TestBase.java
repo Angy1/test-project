@@ -24,7 +24,7 @@ public class TestBase {
 	private String name;
 
 	@BeforeTest
-	public void seUp() throws Exception {
+	public void setUp() throws Exception {
 		Properties properties = new Properties();
 		properties.load(new FileReader(new File("application.properties")));
 		app = new ApplicationManager(properties);
