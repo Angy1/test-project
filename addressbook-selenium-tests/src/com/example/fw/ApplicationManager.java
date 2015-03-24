@@ -29,7 +29,7 @@ public class ApplicationManager {
 			throw new Error("Unsupported browser: "+ browser);
 		}
 	    baseUrl = properties.getProperty("baseUrl");
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    driver.get(baseUrl);
 	    
 	}

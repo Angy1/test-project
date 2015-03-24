@@ -1,54 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19199" started-at="2015-03-20T22:32:16Z" finished-at="2015-03-20T22:32:35Z">
+  <suite name="Default suite" duration-ms="24927" started-at="2015-03-24T04:12:56Z" finished-at="2015-03-24T04:13:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19199" started-at="2015-03-20T22:32:16Z" finished-at="2015-03-20T22:32:35Z">
-      <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@2280cdac]" name="setUp" is-config="true" duration-ms="5770" started-at="2015-03-20T18:32:16Z" finished-at="2015-03-20T18:32:22Z">
+    <test name="Default test" duration-ms="24927" started-at="2015-03-24T04:12:56Z" finished-at="2015-03-24T04:13:21Z">
+      <class name="com.example.tests.ContactRemovalTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="setUp" is-config="true" duration-ms="3305" started-at="2015-03-24T00:12:56Z" finished-at="2015-03-24T00:12:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@2280cdac]" name="testGroupCreationWithValidData" duration-ms="5946" started-at="2015-03-20T18:32:22Z" data-provider="groupsFromFile" finished-at="2015-03-20T18:32:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test149936935, header=test774930316, footer=test1795203030]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="deleteSomeContact()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="deleteSomeContact" duration-ms="20561" started-at="2015-03-24T00:12:59Z" finished-at="2015-03-24T00:13:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@2280cdac]" name="testGroupCreationWithValidData" duration-ms="3549" started-at="2015-03-20T18:32:28Z" data-provider="groupsFromFile" finished-at="2015-03-20T18:32:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-1432667699, header=test-1104651986, footer=]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@2280cdac]" name="testGroupCreationWithValidData" duration-ms="3447" started-at="2015-03-20T18:32:31Z" data-provider="groupsFromFile" finished-at="2015-03-20T18:32:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-547332730, header=test-16024046, footer=]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@2280cdac]" name="tearDown" is-config="true" duration-ms="178" started-at="2015-03-20T18:32:35Z" finished-at="2015-03-20T18:32:35Z">
+        </test-method> <!-- deleteSomeContact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="tearDown" is-config="true" duration-ms="1051" started-at="2015-03-24T00:13:20Z" finished-at="2015-03-24T00:13:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupCreationTests -->
+      </class> <!-- com.example.tests.ContactRemovalTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
