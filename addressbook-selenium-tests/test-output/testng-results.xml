@@ -1,21 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24927" started-at="2015-03-24T04:12:56Z" finished-at="2015-03-24T04:13:21Z">
+  <suite name="Default suite" duration-ms="3288" started-at="2015-03-26T00:52:06Z" finished-at="2015-03-26T00:52:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24927" started-at="2015-03-24T04:12:56Z" finished-at="2015-03-24T04:13:21Z">
+    <test name="Default test" duration-ms="3288" started-at="2015-03-26T00:52:06Z" finished-at="2015-03-26T00:52:09Z">
       <class name="com.example.tests.ContactRemovalTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="setUp" is-config="true" duration-ms="3305" started-at="2015-03-24T00:12:56Z" finished-at="2015-03-24T00:12:59Z">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="setUp" is-config="true" duration-ms="0" started-at="2015-03-25T20:52:06Z" finished-at="2015-03-25T20:52:06Z">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[Unable to get browser (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20 milliseconds
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'Central-PC', ip: '192.168.1.107', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_31'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:39569/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: d5be82d9-529e-4b21-9710-472509582606]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: Unable to get browser (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20 milliseconds
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'Central-PC', ip: '192.168.1.107', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_31'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:39569/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: d5be82d9-529e-4b21-9710-472509582606
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at com.example.fw.ApplicationManager.<init>(ApplicationManager.java:33)
+	at com.example.tests.TestBase.setUp(TestBase.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deleteSomeContact()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="deleteSomeContact" duration-ms="20561" started-at="2015-03-24T00:12:59Z" finished-at="2015-03-24T00:13:20Z">
+        <test-method status="SKIP" signature="deleteSomeContact()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="deleteSomeContact" duration-ms="0" started-at="2015-03-25T20:52:09Z" finished-at="2015-03-25T20:52:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteSomeContact -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="tearDown" is-config="true" duration-ms="1051" started-at="2015-03-24T00:13:20Z" finished-at="2015-03-24T00:13:21Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.example.tests.ContactRemovalTests@6f79caec]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-03-25T20:52:09Z" finished-at="2015-03-25T20:52:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
