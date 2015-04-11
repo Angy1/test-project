@@ -1,6 +1,8 @@
 package com.example.tests;
 
+
 public class ContactData implements Comparable<ContactData>{
+	private String id;
 	private String firstname;
 	private String lastname;
 	private String address1;
@@ -15,6 +17,7 @@ public class ContactData implements Comparable<ContactData>{
 	private String group;
 	private String address2;
 	private String homephone2;
+	
 
 	public ContactData() {
 		
@@ -75,19 +78,79 @@ public class ContactData implements Comparable<ContactData>{
 		return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
 	}
 
-//	public ContactData setfirstname(String firstname) {
-//		this.firstname = firstname;
-//		return this;
-//	}
-//
-//	public ContactData setlastname(String lastname) {
-//		this.lastname = lastname;
-//		return this;
-//	}
+	public ContactData withId(String id) {
+		this.id = id;
+		return this;
+	}
+
 
 	public ContactData withFirstName(String firstname) {
 		this.firstname = firstname;
 		return this;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public void setAddress1(String address1) {
+		this.address1 = address1;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setHomephone1(String homephone1) {
+		this.homephone1 = homephone1;
+	}
+
+	public void setMobile1(String mobile1) {
+		this.mobile1 = mobile1;
+	}
+
+	public void setWorkphone1(String workphone1) {
+		this.workphone1 = workphone1;
+	}
+
+	public void setEmail1(String email1) {
+		this.email1 = email1;
+	}
+
+	public void setEmail2(String email2) {
+		this.email2 = email2;
+	}
+
+	public void setBirthdate(String birthdate) {
+		this.birthdate = birthdate;
+	}
+
+	public void setBirthmonth(String birthmonth) {
+		this.birthmonth = birthmonth;
+	}
+
+	public void setBirthyear(String birthyear) {
+		this.birthyear = birthyear;
+	}
+
+	public void setGroup(String group) {
+		this.group = group;
+	}
+
+	public void setAddress2(String address2) {
+		this.address2 = address2;
+	}
+
+	public void setHomephone2(String homephone2) {
+		this.homephone2 = homephone2;
 	}
 
 	public ContactData withLastName(String lastname) {

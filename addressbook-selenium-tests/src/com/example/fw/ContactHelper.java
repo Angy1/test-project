@@ -18,33 +18,16 @@ public class ContactHelper extends WebDriverHelperBase {
 		super(manager);
 	}
 	
-	private SortedListOf<ContactData> cachedContacts;
-	   
-	public SortedListOf<ContactData> getContacts(){
-	if(cachedContacts == null){
-		rebuildCache();
-	}
-	return cachedContacts;
-}	
 			
-	private void rebuildCache() {
-		cachedContacts = new SortedListOf<ContactData>();
-		
-		manager.navigateTo().mainPage();
-		List<WebElement> rows = getContactRows();
-		for (WebElement row : rows) {
-			 String lastname = row.findElement(By.xpath(".//td[2]")).getText();
-			 String firstname = row.findElement(By.xpath(".//td[3]")).getText();
-			 cachedContacts.add(new ContactData().withLastName(lastname).withFirstName(firstname));     
-		}	
-	}
+
 
 	public ContactHelper createContact(ContactData contact, boolean CREATION) {
 		initContactCreation();
 		fillContactForm(contact, CREATION);
 		submitContactCreation();
 		returnToHomePage();
-		rebuildCache();
+		// update model
+		manager.getModel().addContact(contact);
 		return this;	
 	}
 	
@@ -54,7 +37,7 @@ public class ContactHelper extends WebDriverHelperBase {
 		updateContactForm(contact);
 		submitContactModification();
 		returnToHomePage();
-		rebuildCache();
+		manager.getModel().removeContact(index).addContact(contact);
 		return this;
 	}
 	
@@ -63,13 +46,27 @@ public class ContactHelper extends WebDriverHelperBase {
 		selectContactByIndex(index);
 		submitContactDeletion();
 		returnToHomePage();
-		rebuildCache();
+		manager.getModel().removeContact(index);
 		return this;
 	}
 
 	
 
 	//--------------------------------------------------------------------------------------------
+	
+	public SortedListOf<ContactData> getUiContacts() {
+		SortedListOf<ContactData> contacts = new SortedListOf<ContactData>();
+		
+		manager.navigateTo().mainPage();
+		List<WebElement> rows = getContactRows();
+		for (WebElement row : rows) {
+			 String lastname = row.findElement(By.xpath(".//td[2]")).getText();
+			 String firstname = row.findElement(By.xpath(".//td[3]")).getText();
+			 contacts.add(new ContactData().withLastName(lastname).withFirstName(firstname));     
+		}
+		return contacts;
+	}
+	
 	
 	
 	public ContactHelper initContactCreation() {
@@ -109,7 +106,6 @@ public class ContactHelper extends WebDriverHelperBase {
 
 	public ContactHelper submitContactCreation() {
 		click(By.name("submit"));
-		cachedContacts = null;
 		return this;
 	}
 
@@ -129,13 +125,11 @@ public class ContactHelper extends WebDriverHelperBase {
 
 	public ContactHelper submitContactModification() {
 		click(By.name("update"));
-		cachedContacts = null;
 		return this;
 	}
 
 	public void submitContactDeletion() {
 		click(By.xpath("//*[@id='content']/form[2]/input[2]"));
-		cachedContacts = null;
 	}
 	
 	private List<WebElement> getContactRows() {
